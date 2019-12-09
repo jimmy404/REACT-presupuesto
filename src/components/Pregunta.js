@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
 
-function Pregunta() {
-
+function Pregunta(props) {
+        const {guardarPresupuesto, guardarPreguntaPresupuesto} = props;
         //definir state
         const [ cantidad, guardarCantidad] = useState(0);
         const [ error, guardarError] = useState(false);
@@ -11,12 +11,15 @@ function Pregunta() {
             e.preventDefault();
 
             //validar
-            if(cantidad <= 1 || isNaN( cantidad)){
+            if(cantidad < 1 || isNaN( cantidad)){
                 guardarError(true);
                 return;
             }
 
             //Si se pasa la validacion
+            guardarError(false);
+            guardarPresupuesto(cantidad);
+            guardarPreguntaPresupuesto(false);
         }
     return(
         <Fragment>
