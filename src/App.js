@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Pregunta from './components/Pregunta'
-import Formulario from './components/Formulario'
-import Listado from './components/Listado'
-import ControlPresupuesto from './components/ControlPresupuesto'
+import Pregunta from './components/Pregunta';
+import Formulario from './components/Formulario';
+import Listado from './components/Listado';
+import ControlPresupuesto from './components/ControlPresupuesto';
 
 
 function App() {
@@ -18,8 +18,6 @@ function App() {
     if(crearGasto){
       const listadoGastos = [...gastos, gasto];
       guardarGastos(listadoGastos);
-        //restar presupuesto
-        const presupuestoRestante = restante - gasto.cantidadGasto;
         guardarRestante(guardarRestante);
       //Una vez que se agrega, lo ponemos como false
       guardarCrearGasto(false);

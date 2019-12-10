@@ -7,7 +7,7 @@ function Formulario(props){
     const {guardarGasto, guardarCrearGasto} = props;
     //state
     const [ nombreGasto, guardarNombreGasto ] = useState('');
-    const [ cantidadGasto, guardarCantidadGasto ] = useState(0)
+    const [ cantidadGasto, guardarCantidadGasto ] = useState(0);
     const [ error, guardarError ] = useState(false);
     //cuando se agrega el gasto
 const agregarGasto = e =>{
@@ -38,10 +38,12 @@ const agregarGasto = e =>{
 
 
     return(
-        <form onSubmit={agregarGasto}>
+        <form
+                onSubmit={agregarGasto}
+        >
             <h2>Agrega tus Gastos Aqui</h2>
 
-            {error ? <Error mensaje="Ambos campos son obligatorios o Presupuesto Incorrecto" /> : null}
+            {error ? <Error mensaje='Ambos campos son obligatorios o Presupuesto Incorrecto' /> : null}
 
 
         <div className="campo">
@@ -61,7 +63,7 @@ const agregarGasto = e =>{
                 type="number"
                 className="u-full-width"
                 placeholder="Ej. 300"
-                onChange={e => guardarCantidadGasto( parseInt(e.target.value, 10))}
+                onChange={e => guardarCantidadGasto( parseInt(e.target.value, 10) )}
                 value={cantidadGasto}
             />
         </div>
