@@ -18,7 +18,9 @@ function App() {
     if(crearGasto){
       const listadoGastos = [...gastos, gasto];
       guardarGastos(listadoGastos);
-        guardarRestante(guardarRestante);
+      //restar el presupuesto
+        const presupuestoRestante = restante - gasto.cantidadGasto;
+        guardarRestante(presupuestoRestante);
       //Una vez que se agrega, lo ponemos como false
       guardarCrearGasto(false);
     }
@@ -47,7 +49,7 @@ function App() {
             </div>
             <div className="one-half colum">
               <Listado
-              gastos={gastos}
+                  gastos={gastos}
               />
               <ControlPresupuesto
               presupuesto={presupuesto}

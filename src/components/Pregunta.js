@@ -27,7 +27,7 @@ function Pregunta(props) {
         <Fragment>
             <h2>Coloca tu Presupuesto</h2>
 
-            {error ? <Error mensaje="El presupuesto es incorrecto" /> : null}
+            {error ? <Error mensaje='El presupuesto es incorrecto' /> : null}
 
             <form
             onSubmit={agregarPresupuesto}
