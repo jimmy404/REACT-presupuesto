@@ -5,7 +5,7 @@ function Listado ({gastos}){
 return(
         <div className="gastos-realizados">
             <h2>Listado</h2>
-            {gastos.mas(gasto => (
+            {gastos.map(gasto => (
             <Gasto
                 key={gasto.id}
                 gasto={gasto}

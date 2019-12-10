@@ -14,7 +14,7 @@ const agregarGasto = e =>{
     e.preventDefault();
 
     //validar
-    if(cantidadGasto < 1 || isNaN( cantidadGasto)||nombreGasto === ''){
+    if(cantidadGasto < 1 || isNaN( cantidadGasto ) || nombreGasto === '' ){
         guardarError(true);
         return;
     }

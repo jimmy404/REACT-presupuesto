@@ -1,10 +1,11 @@
 import React from 'react';
 
-const Gasto = () => (
+const Gasto = (gasto) => (
+
     <li className="gastos">
         <p>
-            {Gasto.nombreGasto}
-            <span className="gasto">${Gasto.cantidadGasto}</span>
+            {gasto.nombreGasto}
+            <span className="gasto">${gasto.cantidadGasto}</span>
         </p>
     </li>
 );
